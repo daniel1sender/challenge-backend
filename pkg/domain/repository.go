@@ -3,7 +3,7 @@ package domain
 import (
 	"context"
 
-	"github.com/daniel1sender/alura-flix/domain/entity"
+	"github.com/daniel1sender/alura-flix/pkg/domain/entity"
 )
 
 type Repository interface {

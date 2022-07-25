@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/daniel1sender/alura-flix/domain"
+	"github.com/daniel1sender/alura-flix/pkg/domain"
 	"github.com/gin-gonic/gin"
 )
 

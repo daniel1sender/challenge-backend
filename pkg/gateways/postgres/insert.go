@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/daniel1sender/alura-flix/domain/entity"
+	"github.com/daniel1sender/alura-flix/pkg/domain/entity"
 )
 
 const insertQuery = `INSERT INTO videos(

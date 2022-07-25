@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/daniel1sender/alura-flix/domain/usecases"
-	"github.com/daniel1sender/alura-flix/gateways"
-	handler "github.com/daniel1sender/alura-flix/gateways/http"
-	"github.com/daniel1sender/alura-flix/gateways/postgres"
+	"github.com/daniel1sender/alura-flix/pkg/domain/usecases"
+	"github.com/daniel1sender/alura-flix/pkg/gateways"
+	handler "github.com/daniel1sender/alura-flix/pkg/gateways/http"
+	"github.com/daniel1sender/alura-flix/pkg/gateways/postgres"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4/pgxpool"
 )

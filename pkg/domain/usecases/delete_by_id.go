@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/daniel1sender/alura-flix/domain"
+	"github.com/daniel1sender/alura-flix/pkg/domain"
 )
 
 func (u VideoUseCase) DeleteById(ctx context.Context, id string) error {

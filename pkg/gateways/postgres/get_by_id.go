@@ -3,8 +3,8 @@ package postgres
 import (
 	"context"
 
-	"github.com/daniel1sender/alura-flix/domain"
-	"github.com/daniel1sender/alura-flix/domain/entity"
+	"github.com/daniel1sender/alura-flix/pkg/domain"
+	"github.com/daniel1sender/alura-flix/pkg/domain/entity"
 	"github.com/jackc/pgx/v4"
 )
 

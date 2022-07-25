@@ -3,8 +3,8 @@ package postgres
 import (
 	"context"
 
-	"github.com/daniel1sender/alura-flix/domain"
-	"github.com/daniel1sender/alura-flix/domain/entity"
+	"github.com/daniel1sender/alura-flix/pkg/domain"
+	"github.com/daniel1sender/alura-flix/pkg/domain/entity"
 )
 
 const getAllQuery = `SELECT id, title, description, url FROM videos`

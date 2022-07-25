@@ -1,6 +1,6 @@
 package http
 
-import "github.com/daniel1sender/alura-flix/domain"
+import "github.com/daniel1sender/alura-flix/pkg/domain"
 
 type Handler struct {
 	useCase domain.UseCase

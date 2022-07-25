@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/daniel1sender/alura-flix/domain/entity"
+	"github.com/daniel1sender/alura-flix/pkg/domain/entity"
 )
 
 var (

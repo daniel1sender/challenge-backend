@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/daniel1sender/alura-flix/domain/entity"
+	"github.com/daniel1sender/alura-flix/pkg/domain/entity"
 )
 
 func (u VideoUseCase) Create(ctx context.Context, title, description, url string) (entity.Video, error) {
