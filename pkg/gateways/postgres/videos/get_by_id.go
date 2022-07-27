@@ -1,10 +1,10 @@
-package postgres
+package videos
 
 import (
 	"context"
 
-	"github.com/daniel1sender/alura-flix/pkg/domain/videos"
 	"github.com/daniel1sender/alura-flix/pkg/domain/entities"
+	"github.com/daniel1sender/alura-flix/pkg/domain/videos"
 	"github.com/jackc/pgx/v4"
 )
 

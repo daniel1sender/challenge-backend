@@ -9,7 +9,7 @@ import (
 	"github.com/daniel1sender/alura-flix/pkg/domain/videos/usecases"
 	"github.com/daniel1sender/alura-flix/pkg/gateways"
 	handler "github.com/daniel1sender/alura-flix/pkg/gateways/http"
-	"github.com/daniel1sender/alura-flix/pkg/gateways/postgres"
+	"github.com/daniel1sender/alura-flix/pkg/gateways/postgres/videos"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4/pgxpool"
 )
@@ -21,7 +21,7 @@ func main() {
 	}
 	conn, _ := pgxpool.Connect(ctx, "postgres://postgres:1234@localhost:5432/challenge?sslmode=disable")
 
-	flixStorage := postgres.NewStorage(conn)
+	flixStorage := videos.NewStorage(conn)
 	flixUseCase := usecases.NewUseCase(flixStorage)
 	handler := handler.NewHandler(flixUseCase)
 

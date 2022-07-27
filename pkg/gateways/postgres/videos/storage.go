@@ -1,4 +1,4 @@
-package postgres
+package videos
 
 import (
 	pgx "github.com/jackc/pgx/v4/pgxpool"
