@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/daniel1sender/alura-flix/pkg/domain"
+	"github.com/daniel1sender/alura-flix/pkg/domain/videos"
 	"github.com/gin-gonic/gin"
 )
 
@@ -42,7 +42,7 @@ func (h Handler) UpdateByID(c *gin.Context) {
 	if err != nil {
 		var responseError Error
 		switch {
-		case errors.Is(err, domain.ErrNoVideoFound):
+		case errors.Is(err, videos.ErrNoVideoFound):
 			responseError.Error = err.Error()
 			c.JSON(http.StatusNotFound, responseError)
 		default:

@@ -3,7 +3,7 @@ package postgres
 import (
 	"context"
 
-	"github.com/daniel1sender/alura-flix/pkg/domain"
+	"github.com/daniel1sender/alura-flix/pkg/domain/videos"
 	"github.com/daniel1sender/alura-flix/pkg/domain/entities"
 )
 
@@ -26,7 +26,7 @@ func (fs VideoStorage) GetAll(ctx context.Context) ([]entities.Video, error) {
 	}
 
 	if len(allVideo) == 0 {
-		return []entities.Video{}, domain.ErrNoVideoFound
+		return []entities.Video{}, videos.ErrNoVideoFound
 	}
 
 	return allVideo, nil

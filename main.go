@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/daniel1sender/alura-flix/pkg/domain/usecases"
+	"github.com/daniel1sender/alura-flix/pkg/domain/videos/usecases"
 	"github.com/daniel1sender/alura-flix/pkg/gateways"
 	handler "github.com/daniel1sender/alura-flix/pkg/gateways/http"
 	"github.com/daniel1sender/alura-flix/pkg/gateways/postgres"
