@@ -16,7 +16,9 @@ import (
 
 func main() {
 	ctx := context.Background()
-	gateways.RunMigrations()
+	if err := gateways.RunMigrations(); err != nil {
+		log.Printf("error to run migrations: %v", err)
+	}
 	conn, _ := pgxpool.Connect(ctx, "postgres://postgres:1234@localhost:5432/challenge?sslmode=disable")
 
 	flixStorage := postgres.NewStorage(conn)
