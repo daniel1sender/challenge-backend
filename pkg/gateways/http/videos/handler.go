@@ -1,4 +1,4 @@
-package http
+package videos
 
 import "github.com/daniel1sender/alura-flix/pkg/domain/videos"
 

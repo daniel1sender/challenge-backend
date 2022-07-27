@@ -1,10 +1,11 @@
-package http
+package videos
 
 import (
 	"errors"
 	"net/http"
 
 	"github.com/daniel1sender/alura-flix/pkg/domain/videos"
+	server "github.com/daniel1sender/alura-flix/pkg/gateways/http"
 	"github.com/gin-gonic/gin"
 )
 
@@ -25,22 +26,22 @@ func (h Handler) UpdateByID(c *gin.Context) {
 
 	var video UpdateRequestVideo
 	if err := c.ShouldBindJSON(&video); err != nil {
-		var responseError Error
+		var responseError server.Error
 		responseError.Error = err.Error()
 		c.JSON(http.StatusBadRequest, responseError)
 		return
 	}
 
 	if len(video.Title) == 0 && len(video.Description) == 0 && len(video.URL) == 0 {
-		var responseError Error
-		responseError.Error = ErrEmptyBody.Error()
+		var responseError server.Error
+		responseError.Error = server.ErrEmptyBody.Error()
 		c.JSON(http.StatusBadRequest, responseError)
 		return
 	}
 
 	err := h.useCase.UpdateByID(c.Request.Context(), id, video.Title, video.Description, video.URL)
 	if err != nil {
-		var responseError Error
+		var responseError server.Error
 		switch {
 		case errors.Is(err, videos.ErrNoVideoFound):
 			responseError.Error = err.Error()

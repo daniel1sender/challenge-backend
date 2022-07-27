@@ -8,7 +8,7 @@ import (
 
 	"github.com/daniel1sender/alura-flix/pkg/domain/videos/usecases"
 	"github.com/daniel1sender/alura-flix/pkg/gateways"
-	handler "github.com/daniel1sender/alura-flix/pkg/gateways/http"
+	handler "github.com/daniel1sender/alura-flix/pkg/gateways/http/videos"
 	"github.com/daniel1sender/alura-flix/pkg/gateways/postgres/videos"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v4/pgxpool"

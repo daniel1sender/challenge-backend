@@ -1,10 +1,11 @@
-package http
+package videos
 
 import (
 	"errors"
 	"net/http"
 
 	"github.com/daniel1sender/alura-flix/pkg/domain/videos"
+	server "github.com/daniel1sender/alura-flix/pkg/gateways/http"
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,7 +13,7 @@ func (h Handler) GetByID(c *gin.Context) {
 	id := c.Param("id")
 	video, err := h.useCase.GetByID(c.Request.Context(), id)
 	if err != nil {
-		var responseError Error
+		var responseError server.Error
 		switch {
 		case errors.Is(err, videos.ErrNoVideoFound):
 			responseError.Error = err.Error()
