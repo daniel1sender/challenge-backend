@@ -8,7 +8,7 @@ import (
 
 func RunMigrations() error {
 	m, err := migrate.New(
-		"file://gateways/migrations",
+		"file://pkg/gateways/migrations",
 		"postgres://postgres:1234@localhost:5432/challenge?sslmode=disable")
 	if err != nil {
 		return err
