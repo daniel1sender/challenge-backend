@@ -2,8 +2,13 @@ package categories
 
 import (
 	"context"
+	"errors"
 
 	"github.com/daniel1sender/alura-flix/pkg/domain/entities"
+)
+
+var (
+	ErrNoCategoryFound = errors.New("no category found")
 )
 
 type Repository interface {
